@@ -1,2 +1,2 @@
-Add-VpnConnection -Name "MyVPNConnection" -ServerAddress "219.100.37.8" -TunnelType L2tp -L2tpPsk "vpn" -AuthenticationMethod Chap,MSChapv2 -EncryptionLevel Required -AllUserConnection -PassThru "vpn" -RememberCredential "vpn" -SplitTunneling $false
+Add-VpnConnection -Name "MyVPNConnection" -ServerAddress "219.100.37.8" -TunnelType L2tp -L2tpPsk "vpn" -AuthenticationMethod Chap,MSChapv2 -EncryptionLevel Required -AllUserConnection -PassThru -RememberCredential -SplitTunneling $false
 PowerShell.exe -WindowStyle Hidden  -Command "rasdial "MyVPNConnection" "vpn" "vpn""
